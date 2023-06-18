@@ -1,0 +1,17 @@
+.cart-section {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.home{
+    &-container{
+        margin-top: 45px; 
+        border-top: 1px solid #acacac;
+    }
+    &-description{
+        color: #acacac; 
+        padding-top: 20px;
+    }
+}

@@ -1,0 +1,29 @@
+.shoppingcart{
+    &-container{
+        min-width: 80px;
+        background-color: #fbe8fe;
+        padding: 5px;
+        color: #9932bb;
+        font-size: 15px;
+        font-weight: 700;
+        border: 1px solid #9932bb;
+    }
+    &-total{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-button{
+        background-color: #9932bb;
+        color: white;
+        font-weight: 700;
+        font-size: 12px;
+        height: 36px;
+        width: 38px;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

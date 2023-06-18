@@ -1,0 +1,14 @@
+.cart{
+    &-button{
+        min-width: 80px;
+        background-color: #9932bb;
+        padding: 5px;
+        color: white;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+    }
+}

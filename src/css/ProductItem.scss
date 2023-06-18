@@ -1,0 +1,34 @@
+.product {
+    &-item {
+        position: relative;
+        width: 160px;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #acacac;
+        margin: 10px 10px 10px 0;
+    }
+    &-inCart{
+        border: 1px solid #9932bb;
+        box-shadow: 0px 0px 6px #9932bb;
+    }
+    &-image{
+        width: 150px;
+    }
+    &-qty{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: #9932bb;
+        color: white;
+        font-size: 16px;
+        margin-left: 10px;
+        position: absolute;
+        top: 8px;
+        left: 0;
+    }
+}

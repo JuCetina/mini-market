@@ -1,0 +1,107 @@
+.cart-section {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.product{
+    &-container{
+        border-top: 1px solid #acacac;
+        padding-top: 18px;
+    }
+    &-section{
+        display: flex;
+    }
+    &-quantity-container{
+        width: 20%;
+    }
+    &-quantity{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: #9932bb;
+        color: white;
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    &-img-container{
+        width: 80%;
+    }
+    &-img{
+        width: 200px;
+    }
+    &-detail{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+    &-name{
+        color: black;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    &-symbol{
+        color: #acacac;
+        font-weight: 700;
+        font-size: 25px;
+    }
+    &-price{
+        color: #9932bb;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    &-button{
+        width: 40px;
+        height: 35px;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        &_remove{
+            background-color: #ececec;
+            color: black;
+            &:disabled{
+                background-color: #fffcfc;
+                color: #d9d5d5;
+                cursor: not-allowed;
+            }
+        }
+        &_add{
+            background-color: #9932bb;
+            color: white;
+        }
+    }
+    &-description{
+        color: #acacac;
+        font-size: 16px;
+        margin-top: 10px;
+        padding: 10px 0;
+        border-top: 1px solid #acacac;
+        border-bottom: 1px solid #acacac;
+    }
+    
+}
+
+.buttons{
+    &-container{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 955px){
+    .product{
+        &-section{
+            justify-content: center;
+        }
+        &-quantity-container{
+            width: initial;
+        }
+        &-img-container{
+            width: initial;
+        }
+    }
+}
