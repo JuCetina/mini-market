@@ -10,7 +10,7 @@ MiniMarket project created with Vite and coded in React 18, using React Router D
 -  Download the project repository or clone the project with:
 
 ```bash
-  git clone https://github.com/JuCetina/mini-market
+    git clone https://github.com/JuCetina/mini-market
 ```
 
 - In command line go to the project directory:
@@ -47,3 +47,5 @@ This will generate the "dist" directory
 
 
 ## Demo
+
+#### https://reflective-heat.surge.sh
