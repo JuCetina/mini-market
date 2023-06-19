@@ -1,8 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../css/ProductItem.scss';
+import { useSelector } from 'react-redux';
 
-const ProductItem = ({ data, cart }) => {
+const ProductItem = ({ data }) => {
+  const state = useSelector(state => state);
+
+  const { cart } = state.market;
+
   let navigate = useNavigate();
 
   let itemInCart = cart.find(item => item.id === data.id);

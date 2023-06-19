@@ -2,12 +2,16 @@ import React from 'react';
 import '../css/ShoppingCart.scss';
 import ShoppingCartButton from './ShoppingCartButton';
 import Widget from './Widget';
+import { useSelector } from 'react-redux';
 
-const ShoppingCart = ({ cart }) => {
+const ShoppingCart = () => {
+    const state = useSelector(state => state);
+
+    const { cart } = state.market;
 
     const total = cart.reduce((acm, product) => acm + (product.price * product.quantity), 0);
 
-    let totalWithCents =`${total}00`;
+    let totalWithCents = `${total}00`;
 
     let COPPeso = new Intl.NumberFormat('es-CO', {
         style: 'currency',
@@ -17,7 +21,7 @@ const ShoppingCart = ({ cart }) => {
     return (
         <>
             <div className='cart-section'>
-                <ShoppingCartButton cart={cart} />
+                <ShoppingCartButton />
             </div>
             <h2 className='product-title'>Shopping Cart</h2>
             <div className='product-container'>
@@ -31,9 +35,9 @@ const ShoppingCart = ({ cart }) => {
                 <p className='total-text'>Total: </p>
                 <p className='total-text total-text_value'>{COPPeso.format(total)}</p>
             </div>
-            
+
             {cart.length > 0 && <Widget amount={totalWithCents} />}
-            
+
         </>
     )
 }

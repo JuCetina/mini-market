@@ -11,7 +11,7 @@ import Home from './Home';
 const MiniMarket = () => {
     const state = useSelector(state => state);
 
-    const { products, cart } = state.market;
+    const { products } = state.market;
 
     return (
         <HashRouter>
@@ -24,15 +24,15 @@ const MiniMarket = () => {
                     </div>
                     <h1 className='market-title'>Store</h1>
                     <section className='market-products'>
-                        {products.map(item => <ProductItem key={item.id} data={item} cart={cart} />)}
+                        {products.map(item => <ProductItem key={item.id} data={item} />)}
                     </section>
                 </section>
                 
                 <section className='market-right'>
                     <Routes>
-                        <Route path='/' element={<Home cart={cart} />} />
-                        <Route path='/products/:idProduct' element={<ProductDetail products={products} cart={cart} />} />
-                        <Route path='/cart' element={<ShoppingCart cart={cart} />} />
+                        <Route path='/' element={<Home />} />
+                        <Route path='/products/:idProduct' element={<ProductDetail />} />
+                        <Route path='/cart' element={<ShoppingCart />} />
                     </Routes>
                 </section>
             </main>

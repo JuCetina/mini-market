@@ -1,11 +1,15 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { clearCart } from '../actions/marketActions';
 import shoppingCart from '../assets/shopping_cart_violet.svg';
 import '../css/ShoppingCartButton.scss';
 import close from '../assets/close.svg';
 
-const ShoppingCartButton = ({ cart }) => {
+const ShoppingCartButton = () => {
+    const state = useSelector(state => state);
+
+    const { cart } = state.market;
+
     const dispatch = useDispatch();
 
     let totalPrice = 0;

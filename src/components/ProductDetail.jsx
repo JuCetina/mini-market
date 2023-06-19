@@ -1,11 +1,15 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
 import { addToCart, removeFromCart } from '../actions/marketActions';
 import '../css/ProductDetail.scss';
 import CartButton from './CartButton';
 
-const ProductDetail = ({ products, cart }) => {
+const ProductDetail = () => {
+    const state = useSelector(state => state);
+
+    const { products, cart } = state.market;
+
     const dispatch = useDispatch();
 
     let { idProduct } = useParams();
@@ -22,7 +26,7 @@ const ProductDetail = ({ products, cart }) => {
     return (
         <>
             <div className='cart-section'>
-                <CartButton cart={cart} />
+                <CartButton />
             </div>
 
             <h2 className='product-title'>Product</h2>

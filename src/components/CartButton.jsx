@@ -2,8 +2,13 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import '../css/CartButton.scss';
 import shoppingCart from '../assets/shopping_cart.svg';
+import { useSelector } from 'react-redux';
 
-const CartButton = ({ cart }) => {
+const CartButton = () => {
+    const state = useSelector(state => state);
+
+    const { cart } = state.market;
+
     let navigate = useNavigate();
     
     let totalPrice = 0;
